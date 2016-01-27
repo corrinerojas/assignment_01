@@ -49,7 +49,7 @@ class Test_Assignment_01(unittest.TestCase):
         A test to explore notation of big integers.
         """
         x = 42,000
-        self.assertTrue(isinstance(x, big))
+        self.assertFalse(isinstance(x, int))
 
     def test_bigger_integers(self):
         """
@@ -59,7 +59,7 @@ class Test_Assignment_01(unittest.TestCase):
         self.assertEqual(big, 1000000.0)
         self.assertTrue(type(big), int)
 
-        small = 1e-5
+        small = 0.0001
         self.assertEqual(small, 0.0001)
         self.assertTrue(type(small), int)
 
@@ -69,7 +69,7 @@ class Test_Assignment_01(unittest.TestCase):
         """
         i = 1
         self.assertTrue(type(i) == int)
-        self.assertTrue(isinstance(i, float))  # These lines do the same type checking
+        self.assertTrue(isinstance(i, int))  # These lines do the same type checking
         i = float(i)
         self.assertTrue(isinstance(i, float))
         i = str(i)
@@ -90,7 +90,7 @@ class Test_Assignment_01(unittest.TestCase):
         """
         j = 3.9999
         self.assertTrue(int(j), float)
-        self.assertEqual(int(j), 4)
+        self.assertEqual(int(j), 3)
 
     def tearDown(self):
         """
