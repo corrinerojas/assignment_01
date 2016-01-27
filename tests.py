@@ -1,31 +1,7 @@
 import unittest
 
 class Test_Assignment_01(unittest.TestCase):
-    """
-    Below are a series of tests, some of which will fail.
 
-    Automated testing will be performed when you submit a
-    Pull Request and any time that you make any future
-    modification to the file.
-
-    If you get stuck, launch a Python interpreter (Python,
-    iPython, or Jupyter Notebook) and copy a small block of
-    code.
-
-    For example, if the test reads:
-
-    x = 'abcde'
-    self.assertEqual(4, len(x))
-
-    and you are unsure what len(x) might return, you can
-    execute:
-
-    >>> x = 'abcde'
-    >>> len(x)
-    5
-
-    in any of the above interpreters.
-    """
     
     def setUp(self):
         """
@@ -43,14 +19,14 @@ class Test_Assignment_01(unittest.TestCase):
         """
         A test that will fail.
         """
-        self.assertFalse(True, 'This should fail, please fix it.')
+        self.assertFalse(False, 'This should fail, please fix it.')
 
     def test_assert_equality(self):
         """
         A test for equality by assigning a value to a variable
         and evaluating an expression.
         """
-        expected_value = 
+        expected_value = 2
         truth_value = 1 + 1
         self.assertEqual(expected_value, truth_value)
 
@@ -65,7 +41,7 @@ class Test_Assignment_01(unittest.TestCase):
         A test for evaluating an expression
         """
         my_string = 'Hello World'
-        my_string_length = len(my_string)  # The expression
+        my_string_length = len(my_string)
         self.assertEqual(10, my_string_length)
 
     def test_big_integers(self):
@@ -104,9 +80,9 @@ class Test_Assignment_01(unittest.TestCase):
         A poorly named function to test converting strings to numeric types
         """
         k = "123"
-        self.assertIsInstance(k, str)  # New assertion type that shortens previous calls
+        self.assertIsInstance(k, str) 
         k = float(k)
-        self.assertEqual(123, k)  # Hmmm, note how this equality works across types
+        self.assertEqual(123, k)  
 
     def test_type_conversion_gotcha(self):
         """
